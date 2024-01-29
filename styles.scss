@@ -1,0 +1,249 @@
+:root{
+    --accent-color: rgb(5, 6, 73);;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: nunito;
+}
+
+a{
+    font-family: fredoka;
+}
+
+.title{
+    font-family: lato;
+    font-weight: bold;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 300px auto;
+    height: fit-content;
+
+    aside{
+        background-color: var(--accent-color);
+        color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto auto auto auto auto 1fr;
+
+        .title{
+            font-size: 20px;
+            margin: 10px 0px;
+        }
+
+        a{
+            color: white;
+        }
+
+        hr{
+            margin: 32px 0px;
+            border-width: .5px;
+            border-color: gray;
+            height: 0;
+        }
+        .image-container{
+            width: fit-content;
+            margin: 20px auto;
+            margin-top: 30px;
+            img{
+                width: 140px;
+                border-radius: 70px;
+            }
+        }
+
+        .description{
+            .txt{
+                color: rgb(219, 219, 219);
+            }
+        }
+
+        .languages{
+            .language{
+                text-transform: uppercase;
+                margin: 10px 0px;
+            }
+            progress{
+                min-width: 100%;
+            }
+        }
+
+        .links{
+            .link{
+                margin: 12px 0px;
+
+                a{
+                    color: rgb(174, 174, 174);
+                }
+            }
+        }
+        .logo-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            .logo{
+                width: fit-content;
+                margin: 10px auto;
+                img{
+                    width: 120px;
+                }
+            }
+            .punch-line{
+                padding-bottom: 20px;
+                p{
+                    color: goldenrod;
+                    font-family: lato;
+                    font-weight: light;
+                    font-size: large;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    section#content{
+        padding: 20px;
+        header{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0px;
+
+            .left{
+                .name{
+                    font-size: 50px;
+                    text-transform: uppercase;
+                    font-family: lato;
+                    display: grid;
+                    
+                }
+                .occupation{
+                    font-size: small;
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 16px;
+                
+
+
+                .u-info{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    gap: 5px;
+                    align-items: center;
+
+                    .icon{
+                        background-color: var(--accent-color);
+                        color: white;
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 10px;
+                    }
+
+                    .desc{
+                        p{
+                            font-family: fredoka;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: black;
+                            font-weight: light;
+
+                        }
+                    }
+                }
+            }
+        }
+        .list-container{
+            
+            h1.list-title{
+                border-bottom: 1px solid var(--accent-color);
+                padding: 10px 0px;
+                margin: 20px 0px;
+                text-transform: uppercase;
+            }
+
+            .list-table{
+                .list-row{
+                    display: grid;
+                    grid-template-columns: 150px 1fr;
+                    gap: 20px;
+
+                    .left{
+                        position: relative;
+                        display: flex;
+                        justify-content: start;
+                        gap: 10px;
+                        flex-direction: column;
+
+                        &::after{
+                            content: "";
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 6px;
+                            position: absolute;
+                            right: -28px;
+                            top: 0px;
+                            background-color: darkblue;
+                        }
+
+                        .title{
+                            text-transform: uppercase;
+                        }
+
+
+
+                    }
+                    .right{
+                        padding-bottom: 32px;
+                        padding-left: 20px;
+                        border-left: 4px solid darkblue;
+
+                        ul{
+                            padding: 20px;
+                            padding-right: 10px;
+                            list-style-type: none;
+
+                            li{
+                                padding: 5px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills{
+            h1{
+                padding: 20px 0px;
+                border-bottom: 1px solid var(--accent-color);
+            }
+
+            .skills-container{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 16px 0px;
+                gap: 6px;
+
+
+                li{
+                    list-style-type: none;
+                    padding: 4px 8px;
+                    border: .5px solid gray;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
